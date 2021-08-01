@@ -61,8 +61,8 @@ namespace ConferenceTracker
             }
             else
             {
-                app.UseHsts();
                 app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
             }
             
             using (var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
